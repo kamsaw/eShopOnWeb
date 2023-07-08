@@ -10,13 +10,13 @@ jobs:
               # Log into Azure
             - uses: azure/login@v1
               with:
-                  creds: ${{ secrets.AZURE_CREDENTIALS2 }}
+                  creds: ${{ secrets.test500 }}
 
               # Deploy Bicep file
             - name: deploy
               uses: azure/arm-deploy@v1
               with:
-                  subscriptionId: f90ac299-dc82-441d-b4c2-1cc548a04411
+                  subscriptionId: 008d7684-8ac8-4244-a9c8-ddc5a8968562
                   resourceGroupName: Bicep
                   template: ./main.bicep
 #                   parameters: storagePrefix=stg
